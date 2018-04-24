@@ -13,7 +13,7 @@ Stats after using fast suffix array on Canis lupus familiaris genom
 
 | Cut size | Time per cut | Total time |
 | ---------|--------------|------------|
-| 10^2     |              |            |
+| 10^2     |   ~ 0.0002   | ~ 300s     |
 | 10^3     |   ~ 0.001s   |  ~ 155s    | 
 | 5 * 10^3 |   ~ 0.01s    |  ~ 150s    |
 | 10^4     |   ~ 0.02     |  ~ 155s    |
