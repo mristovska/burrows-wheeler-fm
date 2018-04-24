@@ -19,7 +19,7 @@ def search_text(text, pattern, cut_size, suffix_array):
     n = 1
     total = 0
     while i < len(text):
-        part = text[i : i + cut_size]
+        part = text[i : i + cut_size] + "$"
         start_i = time.time()
         b = bwt(part, suffix_array)
         c = count_matches(b, pattern)
