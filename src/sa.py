@@ -1,7 +1,7 @@
 def suffix_array_basic(s):
     """Given string s returns suffix array SA(s) 
        Time complexity O(n^2LogN)"""
-    suffices = sorted([(s[i:], i) for i in range(0, len(s) + 1)])
+    suffices = sorted([(s[i:], i) for i in range(0, len(s))])
     return [x[1] for x in suffices]
 
 
@@ -33,7 +33,7 @@ def suffix_array_fast(text, _step=16):
 
     Explanation: 'a' < 'ana' < 'anana' < 'banana' < 'na' < 'nana'
     """
-    tx = text + "$"
+    tx = text
     size = len(tx)
     step = min(max(_step, 1), len(tx))
     sa = list(range(len(tx)))
@@ -75,6 +75,7 @@ def suffix_array_fast(text, _step=16):
         step *= 2
     del grpstart
     return sa
+
 
 with open("sa_test.txt") as f:
     s = f.read()
