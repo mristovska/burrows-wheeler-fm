@@ -1,5 +1,6 @@
 from io import StringIO
 from bw import bwt, count_matches, create_tally, first_col
+from sa import suffix_array_basic, suffix_array_fast
 
 
 parsed_fa = {}
@@ -12,7 +13,7 @@ text = parsed_fa['ref|NW_003726046.1|']
 print (len(text))
 
 
-def search_text(text, pattern, cut_size):
+def search_text(text, pattern, cut_size, suffix_array):
     start = time.time()
     i = 0
     n = 1
@@ -20,7 +21,7 @@ def search_text(text, pattern, cut_size):
     while i < len(text):
         part = text[i : i + cut_size]
         start_i = time.time()
-        b = bwt(part, suffix_array_fast)
+        b = bwt(part, suffix_array)
         c = count_matches(b, pattern)
         end_i = time.time()
         total += c
@@ -31,6 +32,5 @@ def search_text(text, pattern, cut_size):
     print ('Total time ' + str(end - start) + 's', 'Total matches = '  + str(total))
 
 
-
 if __name__ == "__main__":
-    search_text(text, 'ATGATG', 5 * 10**3)
+    search_text(text, 'ATGATG', 5 * 10**3, suffix_array_fast)
