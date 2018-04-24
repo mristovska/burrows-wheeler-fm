@@ -33,7 +33,7 @@ def suffix_array_fast(text, _step=16):
 
     Explanation: 'a' < 'ana' < 'anana' < 'banana' < 'na' < 'nana'
     """
-    tx = text
+    tx = text + "$"
     size = len(tx)
     step = min(max(_step, 1), len(tx))
     sa = list(range(len(tx)))
