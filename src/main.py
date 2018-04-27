@@ -3,16 +3,6 @@ from bw import bwt, count_matches, create_tally, first_col
 from sa import suffix_array_basic, suffix_array_fast
 
 
-parsed_fa = {}
-with open("cfa_ref_CanFam3.1_chr1.fa") as f:
-    parsed_fa = parse_fasta(StringIO(f.read()))
-    for k, d in parsed_fa.items():
-        print (k)
-
-text = parsed_fa['ref|NW_003726046.1|']
-print (len(text))
-
-
 def search_text(text, pattern, cut_size, suffix_array):
     start = time.time()
     i = 0
@@ -32,5 +22,14 @@ def search_text(text, pattern, cut_size, suffix_array):
     print ('Total time ' + str(end - start) + 's', 'Total matches = '  + str(total))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":    
+    parsed_fa = {}
+    file_name1 = 'cfa_ref_CanFam3.1_chr1.fa'
+    file_name2 = '42345_ref_DPV01_chrUn.fa'
+    text = ""
+    with open(file_name1) as f:
+        parsed_fa = parse_fasta(StringIO(f.read()))
+        for k, d in parsed_fa.items():
+            text += d
+    print('Total length of input text sequence = {}'.format(len(text)))
     search_text(text, 'ATGATG', 5 * 10**3, suffix_array_fast)
