@@ -21,3 +21,4 @@ Stats after using fast suffix array on Canis lupus familiaris genom
 | 10^5     |   ~ 0.27s    |  ~ 180s    |
 | 10^6     |   ~ 3.9s     |  ~ 270s    |
 | 10^7     |   ~ 50s      |  ~ 370s    |
+| 10^8     |   ~ 480s     |  ~ 480s    |
