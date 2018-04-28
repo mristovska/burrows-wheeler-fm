@@ -29,18 +29,22 @@ def search_text(text, pattern, cut_size, suffix_array):
     i = 0
     n = 1
     total = 0
+    cut_size = min(cut_size, len(text))
+    occ = []
     while i < len(text):
         part = text[i : i + cut_size] + "$"
         start_i = time.time()
-        b = bwt(part, suffix_array)
-        c = count_matches(b, pattern)
+        fm_index = FMIndex(part, suffix_array_fast, 1, 1)
+        occ_i = fm_index.find_occurences(pattern)
+        occ += occ_i
         end_i = time.time()
-        total += c
-        print ("Cut no. " + str(n) + ", elapsed_time = " + str(end_i - start_i) + ", found " + str(c) + " matches")
+        total += len(occ_i)
+        print ("Cut no. " + str(n) + ", elapsed_time = " + str(end_i - start_i) + ", found " + str(len(occ_i)) + " matches")
         n += 1
         i += cut_size - (len(pattern) - 1)
     end = time.time()
     print ('Total time ' + str(end - start) + 's', 'Total matches = '  + str(total))
+    print (occ)
 
 
 if __name__ == "__main__":    
