@@ -1,6 +1,27 @@
+import time
 from io import StringIO
 from bw import bwt, count_matches, create_tally, first_col
 from sa import suffix_array_basic, suffix_array_fast
+
+
+def parse_fasta(fh):
+    fa = {}
+    current_short_name = None
+    # Part 1: compile list of lines per sequence
+    for ln in fh:
+        if ln[0] == '>':
+            # new name line; remember current sequence's short name
+            long_name = ln[1:].rstrip()
+            current_short_name = long_name.split()[0]
+            fa[current_short_name] = []
+        else:
+            # append nucleotides to current sequence
+            fa[current_short_name].append(ln.rstrip())
+    # Part 2: join lists into strings
+    for short_name, nuc_list in fa.items():
+        # join this sequence's lines into one long string
+        fa[short_name] = ''.join(nuc_list)
+    return fa
 
 
 def search_text(text, pattern, cut_size, suffix_array):
