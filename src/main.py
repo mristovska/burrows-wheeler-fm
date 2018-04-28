@@ -36,6 +36,7 @@ def search_text(text, pattern, cut_size, suffix_array):
         start_i = time.time()
         fm_index = FMIndex(part, suffix_array_fast, 1, 1)
         occ_i = fm_index.find_occurences(pattern)
+        occ_i = [x + i for x in occ_i]
         occ += occ_i
         end_i = time.time()
         total += len(occ_i)
