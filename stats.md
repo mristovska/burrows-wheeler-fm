@@ -18,7 +18,7 @@ Stats after using fast suffix array on Canis lupus familiaris genom
 | Cut size | Total memory | Total time | Total matches|
 | ---------|--------------|------------|-------------------|
 | 10^2     |   ~    | ~      | |
-| 10^3     |   ~    |  ~     | |
+| 10^3     |   ~296MB    |  ~220s     |P1: 39975, P2: 11242, P3: 7 |
 | 10^4     |   ~296MB     |  ~230s   | P1: 39975, P2: 11242, P3: 7 |
 | 10^5     |   ~    |  ~     | |
 | 10^6     |   ~      |  ~    ||
