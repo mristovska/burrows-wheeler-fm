@@ -1,6 +1,8 @@
-P1 = "ATGATG"
-P2 = "CTCTCTA"
-P3 = "TCACTACTCTCA"
+P1 = __ATGATG__
+
+P2 = __CTCTCTA__
+
+P3 = __TCACTACTCTCA__
 
 Stats after using slow suffix array on Canis lupus familiaris genom (approx 120mil. characters)
 
