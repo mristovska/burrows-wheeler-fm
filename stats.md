@@ -10,9 +10,7 @@ Stats after using slow suffix array on Canis lupus familiaris genom (approx 120m
 | ---------|--------------|------------|
 | 10^2     |   ~    | ~      |
 | 10^3     |   ~    | ~      | 
-| 5 * 10^3 |   ~    |  ~    |
 | 10^4     |   ~     |  ~     |
-| 5 * 10^4 |   ~      |  ~    |
 | 10^5     |   ~     |  ~    |
 
 Stats after using fast suffix array on Canis lupus familiaris genom
@@ -21,9 +19,7 @@ Stats after using fast suffix array on Canis lupus familiaris genom
 | ---------|--------------|------------|-------------------|
 | 10^2     |   ~    | ~      | |
 | 10^3     |   ~    |  ~     | |
-| 5 * 10^3 |   ~     |  ~     | |
 | 10^4     |   ~296MB     |  ~230s   | P1: 39975, P2: 11242, P3: 7 |
-| 5 * 10^4 |   ~     |  ~     | |
 | 10^5     |   ~    |  ~     | |
 | 10^6     |   ~      |  ~    ||
 | 10^7     |   ~       |  ~    ||
