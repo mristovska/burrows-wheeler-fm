@@ -4,7 +4,9 @@ P2 = __CTCTCTA__
 
 P3 = __TCACTACTCTCA__
 
-Stats after using slow suffix array on Canis lupus familiaris genom (approx 120mil. characters)
+# Canis lupus familiaris genom 1st chromosome (approx 120mil. characters)
+
+## Slow suffix array  
 
 | Cut size | Total memory (MB) | Total time (s) | Total matches|
 | ---------|--------------|------------|--------------------|
@@ -14,7 +16,7 @@ Stats after using slow suffix array on Canis lupus familiaris genom (approx 120m
 | 10^5     |      |  ~4270   |P1: 39975, P2: 11242, P3: 7 |
 | 10^6     |      | too much   | |
 
-Stats after using fast suffix array on Canis lupus familiaris genom
+## Fast suffix array 
 
 | Cut size | Total memory (MB) | Total time (s) | Total matches|
 | ---------|--------------|------------|-------------------|
@@ -24,3 +26,13 @@ Stats after using fast suffix array on Canis lupus familiaris genom
 | 10^5     |   ~298  |  ~270       | P1: 39975, P2: 11242, P3: 7 |
 | 10^6     |   ~301      |  ~430   |P1: 39975, P2: 11242, P3: 7 |
 
+
+# Phoenix dactylifera genome (approx 555mil. characters)
+
+## Slow suffix array
+
+## Fast suffix array
+
+| Cut size | Total memory (MB) | Total time (s) | Total matches|
+| ---------|--------------|------------|-------------------|
+| 10^4     |   ~     |  ~    |P1: , P2: , P3:  |
