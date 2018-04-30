@@ -31,6 +31,14 @@ P3 = __TCACTACTCTCA__
 
 ## Slow suffix array
 
+| Cut size | Total memory (MB) | Total time (s) | Total matches|
+| ---------|--------------|------------|-------------------|
+| 10^2     |   ~1800     |  ~1288   |P1: 270956, P2: 43926, P3: 44|
+| 10^3     |   ~1800     |  ~1123   |P1: 270956, P2: 43926, P3: 44|
+| 10^4     |   ~1800     |  ~1268   |P1: 270956, P2: 43926, P3: 44|
+| 10^5     |   ~1800     |  ~1528   |P1: 270956, P2: 43926, P3: 44|
+| 10^6     |   ~1800     |  ~1923   |P1: 270956, P2: 43926, P3: 44|
+
 ## Fast suffix array
 
 | Cut size | Total memory (MB) | Total time (s) | Total matches|
